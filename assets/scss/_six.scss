@@ -1,0 +1,97 @@
+.six{
+    background-image: url(../media/element.png), url(../media/element3.png), url(../media/element.png);
+    background-repeat: no-repeat;
+    background-position: 5% 50%, 96% 38%, 59% 100%;
+    .contain{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__h2{
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        &__a{
+            color: #FB8F1D;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        &__a:hover{
+            color: #ffb361;
+        }
+        .slider{
+            width: 100%;
+            ul{
+                li{
+                    width: 23%;
+                    position: relative;
+                    height: 380px;
+                    border-radius: 9px;
+                    overflow: hidden;
+                    margin:1%;
+                    cursor: pointer;
+                    .bottom{
+                        position: absolute;
+                        color: black;
+                        height: 220px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: white;
+                        padding-top: 16px;
+                        padding-right: 10px;
+                        padding-left: 10px;
+                        padding-bottom: 20px;
+                        line-height: 10px !important;
+                        b{
+                            line-height: 20px;
+                        }
+                        p{
+                            line-height: 20px;
+                        }
+                        a{
+                            color: #FB8F1D;
+                        }
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                li:hover{
+                    transform: scale(1.01);
+                    transition-timing-function: linear;
+                    transition-duration: .3s;
+                    box-shadow: 0 0 9px grey;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:800px){
+    .six{
+        .contain{
+            .slider{
+                ul{
+                    li{
+                        width: 48%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:600px){
+    .six{
+        .contain{
+            .slider{
+                ul{
+                    li{
+                        width: 98%;
+                    }
+                }
+            }
+        }
+    }
+}

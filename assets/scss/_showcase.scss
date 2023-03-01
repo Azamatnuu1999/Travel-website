@@ -1,0 +1,185 @@
+header{
+    .contain{
+        .navbar{
+            display: flex;
+            &__links{
+                display: flex;
+                gap: 9%;
+                .active{
+                    font-weight: 700;
+                    color: black;
+                }
+                li{
+                    a{
+                        color: grey;
+                        text-decoration: none;
+                    }
+                }
+            }
+            &__form{
+                button{
+                    color: white;
+                    background-color: #FB8F1D;
+                    padding: 10px 25px;
+                    border-radius: 7px;
+                    border: none;
+                    margin-left: 10px;
+                    border: 1px solid #FB8F1D;
+                }
+                button:hover{
+                    color: #FB8F1D;
+                    background-color: white;
+                    border: 1px solid #FB8F1D;
+                }
+                .active{
+                    color: #FB8F1D;
+                    background-color: white;
+                    border: 1px solid #FB8F1D;
+                }
+                .active:hover{
+                    color: white;
+                    border: 1px solid #FB8F1D;
+                    background-color: #FB8F1D;
+                    padding: 10px 25px;
+                    border-radius: 7px;
+                    margin-left: 10px;
+                }
+            }
+            &__input{
+                display: none;
+            }
+            &__input:checked ~ ul{
+                display: block;
+                position: absolute;
+                top: 30px;
+                left: 32%;
+                background-color: #fb901de2;
+                padding: 10px 20px;
+                border-radius: 5px;
+                a{
+                    color: white;
+                }
+            }
+            &__label{
+                display: none;
+            }
+        }
+        .showcase{
+            display: flex;
+            .fifty{
+                width: 50%;
+                &__h1{
+                    font-family: 'Playfair Display', serif;
+                }
+                &__text{
+                    margin: 40px 0;
+                    .underline{
+                        border-bottom: 1px solid black;
+                    }
+                }
+                &__form{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10%;
+                    select{
+                        width: 40%;
+                        border-radius: 9px;
+                        padding: 10px 20px;
+                        outline: none;
+                        margin: 10px 0;
+                    }
+                    button{
+                        color: white;
+                        background-color: #FB8F1D;
+                        padding: 10px 45px;
+                        border-radius: 7px;
+                        border: none;
+                        margin-top: 20px;
+                    }
+                    button:hover{
+                        color: #FB8F1D;
+                        background-color: white;
+                        border: 1px solid #FB8F1D;
+                    }
+                }
+            }
+            .first{
+                padding: 4%;
+                background-image: url(../media/element.png), url(../media/element.png), url(../media/element3.png);
+                background-repeat: no-repeat;
+                background-position: left center, right bottom, top right;
+            }
+        }
+    }
+}
+
+@media(max-width:800px){
+    header{
+        .contain{
+            .navbar{
+                &__links{
+                    display: none;
+                }
+                &__form{
+                    button{
+                        padding: 5px 10px;
+                    }
+                }
+                &__input:checked ~ ul{  
+                    top: 30px;
+                    right: 1%;
+                }
+                &__label{
+                    display: block;
+                    order: 3;
+                }
+            }
+            .showcase{
+                flex-wrap: wrap;
+                .fifty{
+                    width: 100%;
+                    &__h1{
+                        font-family: 'Playfair Display', serif;
+                    }
+                    &__text{
+                        margin: 40px 0;
+                        .underline{
+                            border-bottom: 1px solid black;
+                        }
+                    }
+                    &__form{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10%;
+                        select{
+                            width: 40%;
+                            border-radius: 9px;
+                            padding: 10px 20px;
+                            outline: none;
+                            margin: 10px 0;
+                        }
+                        button{
+                            color: white;
+                            background-color: #FB8F1D;
+                            padding: 10px 45px;
+                            border-radius: 7px;
+                            border: none;
+                            margin-top: 20px;
+                        }
+                        button:hover{
+                            color: #FB8F1D;
+                            background-color: white;
+                            border: 1px solid #FB8F1D;
+                        }
+                    }
+                }
+                .first{
+                    padding: 4%;
+                    background-image: url(../media/element.png), url(../media/element.png), url(../media/element3.png);
+                    background-repeat: no-repeat;
+                    background-position: left center, right bottom, top right;
+                }
+            }
+        }
+    }
+}

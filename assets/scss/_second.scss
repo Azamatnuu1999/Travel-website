@@ -1,0 +1,81 @@
+.second{
+    margin: 90px 0;
+    .contain{
+        display: flex;
+            .fifty{
+                width: 50%;
+                &__h2{
+                    font-weight: 600;
+                    font-family: 'Playfair Display', serif;
+                }
+                &__text{
+                    margin: 40px 0;
+                    color: grey;
+                    .underline{
+                        border-bottom: 1px solid black;
+                    }
+                }
+                &__button{
+                    color: white;
+                    background-color: #FB8F1D;
+                    padding: 10px 45px;
+                    border-radius: 7px;
+                    border: none;
+                    margin-top: 20px;
+                }
+                button:hover{
+                    color: #FB8F1D;
+                    background-color: white;
+                    border: 1px solid #FB8F1D;
+                }        
+            }
+            .first{
+                padding: 4%;
+                background-image:url(../media/element.png), url(../media/element.png), url(../media/element3.png);
+                background-repeat: no-repeat;
+                background-position: left center, right bottom, top right;
+            }
+    }
+}
+
+@media(max-width:800px){
+    .second{
+        .contain{
+            flex-wrap: wrap;
+                .fifty{
+                    width: 100%;
+                    &__h2{
+                        font-weight: 600;
+                        font-family: 'Playfair Display', serif;
+                    }
+                    &__text{
+                        margin: 40px 0;
+                        color: grey;
+                        .underline{
+                            border-bottom: 1px solid black;
+                        }
+                    }
+                    &__button{
+                        color: white;
+                        background-color: #FB8F1D;
+                        padding: 10px 45px;
+                        border-radius: 7px;
+                        border: 1px solid #FB8F1D;
+                        margin-top: 20px;
+                    }
+                    button:hover{
+                        color: #FB8F1D;
+                        background-color: white;
+                        border: 1px solid #FB8F1D;
+                    }        
+                }
+                .first{
+                    order: -1 !important;
+                    padding: 4%;
+                    background-image:url(../media/element.png), url(../media/element.png), url(../media/element3.png);
+                    background-repeat: no-repeat;
+                    background-position: left center, right bottom, top right;
+                }
+        }
+    }
+}
